@@ -4,15 +4,11 @@
   "description": "a game",
   "main": "index.js",
   "scripts": {
-    "start:dev": "webpack -w & nodemon --watch server -e js,html main",
+    "start-dev": "webpack -w & nodemon --watch server -e js,html main",
     "start": "node main",
-    "seed": "node scripts/seed.js"
+    "seed": "node scripts/seed.js",
+    "test": "NODE_ENV='test' DATABASE_URL='postgres://localhost:5432/chin-to-win-test' mocha ./server/**/*.spec.js ./server/**/**/*.spec.js ./client/**/*.spec.js --compilers js:babel-register"
   },
-  "keywords": [
-    "react",
-    "redux",
-    "skeleton"
-  ],
   "dependencies": {
     "axios": "^0.17.1",
     "bluebird": "^3.5.1",
