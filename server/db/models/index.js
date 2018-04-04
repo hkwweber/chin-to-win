@@ -1,6 +1,6 @@
 'use strict';
 
 const db = require('../index');
+const Celeb = require('./celeb.model');
 
-module.exports = {db};
-
+module.exports = {db, Celeb};
