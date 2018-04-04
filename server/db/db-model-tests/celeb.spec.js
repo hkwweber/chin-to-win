@@ -3,7 +3,6 @@ const {db, Celeb} = require('../models')
 
 describe ('Celeb model!!!!!!!', () => {
 	// beforeEach(() => db.sync({force: true}))
-	afterEach(() => db.sync({force: true}))
 })
 
 describe('instanceMethods', () => {
@@ -20,6 +19,11 @@ describe('instanceMethods', () => {
 			.then(celebrity => {
 				jenniferLopez = celebrity;
 			})
+		})
+
+		afterEach(() => {
+			console.log('AFTER EACH')
+			return db.sync({force: true})
 		})
 
 		it ('returns the correct name', () => {
