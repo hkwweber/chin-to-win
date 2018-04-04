@@ -2,7 +2,7 @@ const {expect} = require('chai');
 const {db, Celeb} = require('../models')
 
 describe ('Celeb model!!!!!!!', () => {
-	// beforeEach(() => db.sync({force: true}))
+	beforeEach(() => db.sync({force: true}))
 })
 
 describe('instanceMethods', () => {
