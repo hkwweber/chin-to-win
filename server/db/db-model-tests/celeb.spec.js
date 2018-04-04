@@ -22,7 +22,6 @@ describe('instanceMethods', () => {
 		})
 
 		afterEach(() => {
-			console.log('AFTER EACH')
 			return db.sync({force: true})
 		})
 
