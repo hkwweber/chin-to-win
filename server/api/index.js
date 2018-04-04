@@ -1,13 +1,9 @@
 'use strict'
 const apiRouter = require('express').Router();
 const db = require('../db/models')
-const foodRouter = require('./food.route');
+const celebRouter = require('./celeb.route');
 
-apiRouter.use('/foods', foodRouter);
-
-
-apiRouter.get('/hello', (req, res) => res.send({hello: 'world'}))
-
+apiRouter.use('/celebs', celebRouter);
 
 module.exports = apiRouter;
 
