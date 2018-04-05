@@ -1,13 +1,11 @@
 const {expect} = require('chai');
 const {db, Celeb} = require('../models')
 
-describe ('Celeb model!!!!!!!', () => {
+describe ('Celeb model', () => {
 	beforeEach(() => db.sync({force: true}))
-})
+	afterEach(() => db.sync({force: true}))
 
-describe('instanceMethods', () => {
-
-	describe('correctData', () => {
+	describe('correct data', () => {
 		let jenniferLopez;
 
 		beforeEach(() => {
@@ -19,10 +17,6 @@ describe('instanceMethods', () => {
 			.then(celebrity => {
 				jenniferLopez = celebrity;
 			})
-		})
-
-		afterEach(() => {
-			return db.sync({force: true})
 		})
 
 		it ('returns the correct name', () => {
