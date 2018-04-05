@@ -1,46 +1,49 @@
-const { db, Food } = require("../server/db/models");
+const { db, Celeb } = require("../server/db/models");
 
-const foods = [
+const celebs = [
   {
-    name: "Waffles",
-    photo: 'https://i.imgur.com/JncGdNF.jpg',
-    price: 9,
-    description: 'waffle tiiiiiiiiiiiiiime'
+    name: "Jennifer Lopez",
+    fullPhoto: "https://i.imgur.com/flewa1k.jpg",
+    chinCropPhoto: "https://i.imgur.com/FBbk0RC.jpg"
   },
   {
-    name: "Eggs Benedict",
-    photo: "https://i.imgur.com/kI1980g.jpg",
-    price: 15,
-    description: 'fancy or gross?'
+    name: "John Travolta",
+    fullPhoto: "https://i.imgur.com/SN6iCYv.jpg",
+    chinCropPhoto: "https://i.imgur.com/LLt5qIE.jpg"
   },
   {
-    name: "Eggs and Bacon",
-    photo: "https://i.imgur.com/aXblpRf.jpg",
-    price: 7,
-    description: "sry if you're veg"
+    name: "Oprah",
+    fullPhoto: "https://i.imgur.com/yZ1kAWt.jpg",
+    chinCropPhoto: "https://i.imgur.com/XmDSh0z.jpg"
   },
   {
-    name: "Oatmeal",
-    photo: "https://i.imgur.com/gzO1MNT.jpg",
-    price: 8,
-    description: "healthy"
+    name: "Chrissy Teigen",
+    fullPhoto: "https://i.imgur.com/6wPX9q3.jpg",
+    chinCropPhoto: "https://i.imgur.com/mCz7cin.jpg"
   },
   {
-    name: "Pancakes",
-    photo: "https://i.imgur.com/j95bIAN.jpg",
-    price: 13,
-    description: "yeah pancakes"
-
+    name: "Daniel Day-Lewis",
+    fullPhoto: "https://i.imgur.com/B5xtqoF.jpg",
+    chinCropPhoto: "https://i.imgur.com/O9D0llf.jpg"
   },
   {
-    name: "Bagel and Lox",
-    photo: "https://i.imgur.com/2wyxmRe.jpg",
-    price: 12,
-    description: "best option on this list easily"
-      }
+    name: "Rihanna",
+    fullPhoto: "https://i.imgur.com/Q1IDtrp.jpg",
+    chinCropPhoto: "https://i.imgur.com/1OaZrEC.jpg"
+  },
+  {
+    name: "Brad Pitt",
+    fullPhoto: "[img]https://i.imgur.com/JwwmiV4.jpg[/img]",
+    chinCropPhoto: "https://i.imgur.com/Tma2NLc.jpg"
+  },
+  {
+    name: "Barack Obama",
+    fullPhoto: "https://i.imgur.com/9ST5MRQ.jpg",
+    chinCropPhoto: "https://i.imgur.com/KL13f7N.jpg"
+  },
 ];
 
-const seed = () => Promise.all(foods.map(food => Food.create(food)));
+const seed = () => Promise.all(celebs.map(celeb => Celeb.create(celeb)));
 
 const main = () => {
   console.log("syncing db");
