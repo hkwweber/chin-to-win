@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 const Home = props => {
 	return (
 		<div>
+			<img src='https://i.imgur.com/XmDSh0z.jpg' />
 			<h1>CHIN TO WIN</h1>
 			<Link to='/single-player'>
 			<button>SINGLE PLAYER GAME</button></Link>
