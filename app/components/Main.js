@@ -1,6 +1,7 @@
 "use strict";
 import React, { Component } from "react";
-// import { HashRouter as Router, Route } from "react-router-dom";
+import Home from './Home';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
 export default class Main extends Component {
@@ -13,9 +14,11 @@ export default class Main extends Component {
 
 	render() {
 		return (
+		  <Router>
 			<div>
-				ITS CHIN TO WIN TIME!!!!!!!
+				<Route exact path="/" component={Home} />
 			</div>
+			</Router>
 		);
 	}
 }
