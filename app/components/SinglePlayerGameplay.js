@@ -1,9 +1,8 @@
 "use strict";
 import React, { Component } from "react";
-import SinglePlayerGameplay from "./SinglePlayerGameplay";
 
 
-export default class SinglePlayer extends Component {
+export default class SinglePlayerGameplay extends Component {
 	constructor() {
 		super();
 		this.state = {};
@@ -12,7 +11,7 @@ export default class SinglePlayer extends Component {
 	render() {
 		return (
 			<div>
-			<SinglePlayerGameplay />
+			inside single player gameplay babay
 			</div>
 		);
 	}

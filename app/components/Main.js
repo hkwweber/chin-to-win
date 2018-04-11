@@ -1,6 +1,7 @@
 "use strict";
 import React, { Component } from "react";
 import Home from "./Home";
+import SinglePlayer from './SinglePlayer';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 export default class Main extends Component {
@@ -15,6 +16,7 @@ export default class Main extends Component {
 				<Router>
 					<div>
 						<Route exact path="/" component={Home} />
+						<Route path="/single-player" component={SinglePlayer} />
 					</div>
 				</Router>
 			</div>
