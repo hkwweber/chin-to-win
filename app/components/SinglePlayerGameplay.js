@@ -12,6 +12,12 @@ export default class SinglePlayerGameplay extends Component {
 	}
 
 	render() {
-		return <div>inside single player gameplay babay</div>;
+		return (
+			<div>
+				<img src={this.state.chinCropPhoto} />
+				<input type="text" name="celeb-guess" />
+				<button>GUESS</button>
+			</div>
+		);
 	}
 }
