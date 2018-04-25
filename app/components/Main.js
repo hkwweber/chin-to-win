@@ -4,11 +4,13 @@ import Home from "./Home";
 import SinglePlayer from './SinglePlayer';
 import SinglePlayerInstructions from './SinglePlayerInstructions';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import {fetchAllCelebsFromServer} from '../store';
+import {connect} from 'react-redux';
 
-export default class Main extends Component {
-	constructor() {
-		super();
-		this.state = {};
+class Main extends Component {
+
+	componentDidMount() {
+		this.props.loadAllCelebs();
 	}
 
 	render() {
@@ -25,3 +27,15 @@ export default class Main extends Component {
 		);
 	}
 }
+
+const mapState = state => ({})
+
+const mapDispatch = dispatch => {
+	return {
+		loadAllCelebs () {
+			dispatch(fetchAllCelebsFromServer());
+		}
+	}
+}
+
+export default connect(mapState, mapDispatch)(Main);
