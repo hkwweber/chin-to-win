@@ -13,7 +13,7 @@ export default class SinglePlayerGameplay extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="container-column">
 				<img src={this.state.chinCropPhoto} />
 				<input type="text" name="celeb-guess" />
 				<button>GUESS</button>

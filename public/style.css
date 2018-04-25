@@ -4,7 +4,8 @@
 }
 
 body {
-
+	background-color: #EFEFEF;
+	color: #4F4D52;
 }
 
 .app-container {
@@ -17,4 +18,20 @@ body {
 
 img {
   width: 500px;
+}
+
+.container-row {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	color: #F19F4D;
+	font-weight: bold;
+	font-size: 4em;
 }
