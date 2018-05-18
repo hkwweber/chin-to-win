@@ -25,7 +25,7 @@ export default class SinglePlayerGameplay extends Component {
 
 	onGuessSubmit(e) {
 		e.preventDefault();
-		let isCorrect = this.state.currentGuess === this.state.currentCeleb.name;
+		let isCorrect = this.state.currentGuess.toLowerCase() === this.state.currentCeleb.name.toLowerCase();
 		this.setState({correct: isCorrect, hasGuessed: true, currentGuess: ""});
 
 	}
@@ -38,8 +38,10 @@ export default class SinglePlayerGameplay extends Component {
 		return (
 			<div className="container-column">
 				<img src={this.state.currentCeleb.chinCropPhoto} />
-				<input type="text" name="celeb-guess" value={currentGuess} onChange={this.onGuessEdit}/>
-				<button onClick={this.onGuessSubmit}>GUESS</button>
+				<form className="container-column" onSubmit={this.onGuessSubmit}>
+				<input autoFocus type="text" name="celeb-guess" value={currentGuess} onChange={this.onGuessEdit}/>
+				<button type="submit" >GUESS</button>
+				</form>
 				<div>{result}</div>
 			</div>
 		);
