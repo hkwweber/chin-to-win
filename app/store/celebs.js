@@ -11,7 +11,6 @@ const getAllCelebsFromServer = (celebs) => ({type: GET_ALL_CELEBS_FROM_SERVER, c
 export const fetchAllCelebsFromServer = () => dispatch =>
 	axios.get('/api/celebs')
 		.then(res => {
-			console.log('res.data!!!!', res.data);
 			dispatch(getAllCelebsFromServer(res.data))
 		})
 		.catch(error => console.log(error));
